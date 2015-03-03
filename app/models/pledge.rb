@@ -1,5 +1,5 @@
 class Pledge < ActiveRecord::Base
-	belongs_to :funding_level 
+	belongs_to :funding_level
 	
 	validates :project, presence: true
 	validates :name,  presence: true

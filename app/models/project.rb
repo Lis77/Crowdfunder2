@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
-	has_many :funding_levels, dependant: :nullify
+	
+	has_many :funding_levels, dependent: :nullify
     has_many :pledges, dependent: :nullify
 	
 	validates :name ,presence: true
@@ -9,7 +10,5 @@ class Project < ActiveRecord::Base
 		name.length > 2
 	end
 
-	def description
-
-	end
+	
 end
